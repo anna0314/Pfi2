@@ -1,0 +1,47 @@
+2. XML Frågor
+
+1. Mellan vilka stationer sker sökningen?
+	Malmö-Lund.
+
+2. Hur ser en QueryString ut om man bara vill ha 5 resultatet för sökningen (titta i xsd filen för sökningen)?
+	Lägg till &noOf=5 på slutet, exempel:
+	http://www.labs.skanetrafiken.se/v2.2/resultspage.asp?cmdaction=next&selPointFr=0|80000|0&selPointTo=0|81216|0&noOf=5
+	
+3. Vilka delar av resan beskriver dessa taggar:
+	<Journeys></Journeys> 
+		alla resor
+	
+	<Journey></Journey> 
+		En resa: 
+		Ankomst- och avgångstid 
+		Antal byten
+		Antal zoner
+		Garanti
+		Priser för zoner
+		Färdmedel
+		Priser
+		Rutter
+		Avstånd
+		 
+	<RouteLinks></RouteLinks>
+		Rutter
+			
+	<RouteLink></RouteLink>
+		En rutt:
+		Avgångs- och ankomsttid
+		Priser för zoner
+		Tidpunkt
+		Linje
+		Tillgänglighet
+
+4. Vilken XML-tagg innehåller antal byte för en resa och under vilken huvudtagg är den taggen placerad?
+	<NoOfChanges> </NoOfChanges>. Placerad under <Journey>.
+	
+5. Ge exempel på en XML tagg som inte finns implementerad i det API du laddade ner.
+	<Prices></Prices>
+	
+	
+	
+	
+	
+	
